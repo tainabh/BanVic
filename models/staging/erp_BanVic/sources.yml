@@ -1,0 +1,56 @@
+version: 2
+
+sources:
+  - name: erp
+    description: Fonte de dados do Banco Vitoria
+    schema: BanVic
+    tables:
+      
+    - name: Agencias
+      columns:
+        - name: cod_agencia
+          tests: 
+            - unique
+            - not_null
+
+    - name: Clientes
+      columns:
+        - name: cod_cliente
+          tests: 
+            - unique
+            - not_null
+
+    - name: Colaborador_agencia
+      columns:
+        - name: cod_colaborador
+          tests: 
+            - unique
+            - not_null
+
+    - name: Colaboradores
+      columns:
+        - name: cod_colaborador
+          tests: 
+            - unique
+            - not_null
+
+    - name: Contas
+      columns:
+        - name: cod_cliente
+          tests: 
+            - unique
+            - not_null
+
+    - name: Propostas_credito
+      columns:
+        - name: cod_proposta
+          tests: 
+            - unique
+            - not_null
+
+    - name: Transacoes
+      columns:
+        - name: cod_transacao
+          tests: 
+            - unique
+            - not_null
