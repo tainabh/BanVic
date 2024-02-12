@@ -1,0 +1,43 @@
+version: 2
+
+models: 
+  - name: dim_colaborador
+    description: Dimensao de colaboradores do BanVic. Uma linha por colaborador informacoes da agencia.
+    columns: 
+      - name: id_colaborador
+        description: Chave primaria da dimensao de colaborador.
+        tests: 
+          - not_null
+          - unique  
+
+      - name: id_agencia
+        description: Chave da tabela de agencias.
+
+      - name: nome_colaborador
+        description: Descricao do nome do colaborador.
+
+      - name: data_nascimento_colaborador
+        description: Data de nascimento do colaborador.
+
+      - name: endereco_colaborador
+        description: Endereco do colaborador.
+
+      - name: cep_colaborador
+        description: CEP do colaborador.
+
+      - name: nome_agencia
+        description: Nome da agencia.
+
+      - name: tipo_agencia
+        description: Tipo de agencia.
+
+      - name: endereco_agencia
+        description: Enereco da agencia.
+
+      - name: cidade_agencia
+        description: Cidade da agencia.
+
+      - name: uf_agencia
+        description: Estado da agencia.
+
+      

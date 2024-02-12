@@ -1,0 +1,29 @@
+version: 2
+
+models: 
+  - name: dim_clientes
+    description: Dimensao de clientes do BanVic. Uma linha por cliente com informacoes de endereco.
+    columns: 
+      - name: id_cliente
+        description: Chave primaria da dimensao de clientes.
+        tests: 
+          - not_null
+          - unique  
+
+      - name: nome_cliente
+        description: Descricao do nome do cliente.
+        
+      - name: tipo_de_cliente
+        description: Descricao do tipo do cliente.
+
+      - name: data_inclusao_cliente
+        description: Data de inclusao do cliente no banco.
+
+      - name: data_nascimento_cliente
+        description: Data de nascimento do cliente.
+
+      - name: endereco_cliente
+        description: Endereco do cliente.
+
+      - name: cep_cliente
+        description: CEP do cliente.
