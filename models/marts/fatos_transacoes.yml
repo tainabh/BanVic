@@ -1,0 +1,128 @@
+version: 2
+
+models: 
+  - name: fatos_transacoes
+    description: Tabela de fatos transacoes do BanVic. Uma linha por transacao com informacoes de cliente, colaborador, agencia e propostas.
+    columns: 
+      - name: sk_contas_transacoes
+        description: Chave primaria da tabela fatos.
+        tests: 
+          - not_null
+          - unique  
+
+      - name: id_transacao
+        description: Chave da tabela de transacao.
+
+      - name: id_proposta
+        description: Chave da tabela de propostas.
+
+      - name: id_cliente
+        description: Chave da tabela de clientes.
+
+      - name: id_colaborador
+        description: Chave da tabela de colaboradores.
+
+      - name: id_agencia
+        description: Chave da tabela de agencias.
+
+      - name: id_agencia
+        description: Chave da tabela de agencias.
+
+      - name: data_abertura_conta
+        description: Data em que a conta foi aberta.
+
+      - name: data_ultimo_lancamento_conta
+        description: Data do ultimo lancamento na conta.
+
+      - name: data_entrada_da_proposta
+        description: Data da proposta.
+
+      - name: data_nascimento_colaborador
+        description: Data de nascimento do colaborador.
+
+      - name: data_inclusao_cliente
+        description: Data de inclusao do cliente no banco.
+
+      - name: data_nascimento_cliente
+        description: Data de nascimento do cliente.
+
+      - name: valor_da_transacao
+        description: Valor da transacao efetuada.
+
+      - name: saldo_total_conta_ponderado
+        description: Saldo da conta ponderado pelas quantidade de transacoes em uma mesma conta.
+
+      - name: saldo_disponivel_conta_ponderado
+        description: Saldo disponivel da conta ponderado pelas quantidade de transacoes em uma mesma conta.
+
+      - name: valor_da_proposta
+        description: Valor da proposta.
+
+      - name: valor_do_financiamento
+        description: Valor do financiamento.
+
+      - name: valor_de_entrada
+        description: Valor da entrada.
+
+      - name: valor_da_prestacao
+        description: Valor da prestacao do financiamento.
+
+      - name: quantidade_de_parcelas
+        description: Quantidade de parcelas do financiamento.
+
+      - name: periodo_carencia
+        description: Periodo de carencia.
+
+      - name: taxa_de_juros_mensal
+        description: Valor da taxa de juros mensal.
+
+      - name: nome_cliente
+        description: Descricao do nome do cliente.
+        
+      - name: tipo_de_cliente
+        description: Descricao do tipo do cliente.
+
+      - name: endereco_cliente
+        description: Endereco do cliente.
+
+      - name: cep_cliente
+        description: CEP do cliente.
+
+      - name: numero_da_conta
+        description: Numero da conta.
+
+      - name: tipo_de_conta
+        description: Tipo de conta.
+
+      - name: nome_colaborador
+        description: Descricao do nome do colaborador.
+
+      - name: endereco_colaborador
+        description: Endereco do colaborador.
+
+      - name: cep_colaborador
+        description: CEP do colaborador.
+
+      - name: nome_agencia
+        description: Nome da agencia.
+
+      - name: tipo_agencia
+        description: Tipo de agencia.
+
+      - name: endereco_agencia
+        description: Enereco da agencia.
+
+      - name: cidade_agencia
+        description: Cidade da agencia.
+
+      - name: uf_agencia
+        description: Estado da agencia.
+
+      - name: tipo_transacao
+        description: Descricao do tipo de transacao.
+
+      - name: status_da_proposta
+        description: Status atual da proposta.
+
+      - name: rn
+        description: Identificador de linhas reiniciado a cada nova proposta dentro da mesma conta.
