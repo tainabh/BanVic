@@ -1,0 +1,44 @@
+version: 2
+
+models: 
+  - name: dim_propostas_credito
+    description: Dimensao de propostas de credito do BanVic. Uma linha por proposta.
+    columns: 
+      - name: id_proposta
+        description: Chave primaria da dimensao de propostas de credito.
+        tests: 
+          - not_null
+          - unique  
+
+      - name: id_cliente
+        description: Chave da tabela de cliente.
+
+      - name: id_colaborador
+        description: Chave da tabela de colaborador.
+
+      - name: data_entrada_da_proposta
+        description: Data da proposta.
+
+      - name: taxa_de_juros_mensal
+        description: Valor da taxa de juros mensal.
+
+      - name: valor_da_proposta
+        description: Valor da proposta.
+
+      - name: valor_do_financiamento
+        description: Valor do financiamento.
+
+      - name: valor_de_entrada
+        description: Valor da entrada.
+
+      - name: valor_da_prestacao
+        description: Valor da prestacao do financiamento.
+
+      - name: quantidade_de_parcelas
+        description: Quantidade de parcelas do financiamento.
+
+      - name: periodo_carencia
+        description: Periodo de carencia.
+
+      - name: status_da_proposta
+        description: Status atual da proposta.

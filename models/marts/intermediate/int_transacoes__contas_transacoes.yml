@@ -1,0 +1,50 @@
+version: 2
+
+models: 
+  - name: int_transacoes__contas_transacoes
+    description: Modelo intermediário que faz a relação 1-N de transacoes para contas.
+    columns: 
+      - name: sk_contas_transacoes
+        description: Chave surrogate da int contas transacoes.
+        tests: 
+          - not_null
+          - unique  
+
+      - name: id_transacao
+        description: Chave da tabela de transacoes.
+
+      - name: id_cliente
+        description: Chave da tabela de contas.
+
+      - name: id_agencia
+        description: Chave da tabela de contas.
+
+      - name: id_colaborador
+        description: Chave da tabela de contas.
+
+      - name: tipo_transacao
+        description: Descricao do tipo de transacao.
+
+      - name: data_da_transacao
+        description: Data da transacao.
+
+      - name: valor_da_transacao
+        description: Valor da transacao efetuada.
+
+      - name: numero_da_conta
+        description: Numero da conta.
+
+      - name: tipo_de_conta
+        description: Tipo de conta.
+
+      - name: data_abertura_conta
+        description: Data em que a conta foi aberta.
+
+      - name: saldo_total_conta
+        description: Saldo da conta.
+
+      - name: saldo_disponivel_conta
+        description: Saldo disponivel na conta.
+
+      - name: data_ultimo_lancamento_conta
+        description: Data do ultimo lancamento na conta.
